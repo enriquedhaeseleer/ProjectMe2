@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Persona - SweetSpot</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SweetSpot</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="create-hero">
+            <h1>Create Your Persona</h1>
+            <p>Chat with our AI assistant to create detailed personas</p>
+        </section>
+
+        <section class="workspace">
+            <div class="workspace-container">
+                <div class="chat-column">
+                    <div class="chat-container">
+                        <div class="chat-header">
+                            <div class="chat-header-info">
+                                <i class="ph ph-robot"></i>
+                                <div>
+                                    <h3>AI Assistant</h3>
+                                    <p>Let's create your persona</p>
+                                </div>
+                            </div>
+                            <div class="chat-status">
+                                <span class="status-indicator">Online</span>
+                                <span class="typing-indicator">Typing...</span>
+                            </div>
+                        </div>
+                        <div class="chat-messages" id="ai-messages">
+                            <div class="quick-actions">
+                                <button class="quick-action-btn" data-action="create"><i class="ph ph-plus-circle"></i>Create New Persona</button>
+                                <button class="quick-action-btn" data-action="template" id="show-templates"><i class="ph ph-template"></i>Templates</button>
+                                <button class="quick-action-btn" data-action="help"><i class="ph ph-question"></i>Get Help</button>
+                            </div>
+                            <div class="template-menu" id="template-menu">
+                                <div class="template-categories">
+                                    <button class="category-btn active" data-category="business">Business</button>
+                                    <button class="category-btn" data-category="consumer">Consumer</button>
+                                </div>
+                                <div class="template-list" id="template-list">
+                                    <!-- Templates will be inserted here -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" id="user-message" placeholder="Type 'create persona' to start...">
+                            <button id="send-message"><i class="ph ph-paper-plane-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="result-column">
+                    <div class="result-header">
+                        <div class="result-title">
+                            <h2>Your Persona</h2>
+                            <span class="status-badge">Draft</span>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="new-persona-btn" title="Create New"><i class="ph ph-plus"></i> New</button>
+                            <button class="template-btn" title="Use Template"><i class="ph ph-template"></i> Templates</button>
+                        </div>
+                    </div>
+                    <div id="persona-result">
+                        <div class="empty-state">
+                            <i class="ph ph-user-circle"></i>
+                            <h3>No Persona Created Yet</h3>
+                            <p>Start chatting with the AI to create your first persona</p>
+                        </div>
+                    </div>
+                    <div class="export-panel">
+                        <div class="export-header">
+                            <h3>Export Options</h3>
+                            <span class="last-updated">Last updated: <time>Just now</time></span>
+                        </div>
+                        <div class="export-options">
+                            <button class="export-btn html-export"><i class="ph ph-file-html"></i> HTML</button>
+                            <button class="export-btn json-export"><i class="ph ph-file-json"></i> JSON</button>
+                            <button class="export-btn pdf-export"><i class="ph ph-file-pdf"></i> PDF</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SweetSpot. All rights reserved.</p>
+    </footer>
+    <script type="module" src="templates.js"></script>
+    <script type="module" src="script.js"></script>
+    <script>
+        document.querySelector('.logo').addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

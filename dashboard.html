@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SweetSpot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="dashboard-page">
+    <header>
+        <nav>
+            <div class="logo">SweetSpot</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        <aside class="dashboard-sidebar">
+            <nav class="dashboard-nav">
+                <a href="#overview" class="active"><i class="ph ph-chart-line"></i>Overview</a>
+                <a href="#personas"><i class="ph ph-users"></i>Personas</a>
+                <a href="#canvas"><i class="ph ph-squares-four"></i>Business Canvas</a>
+                <a href="#templates"><i class="ph ph-template"></i>Templates</a>
+            </nav>
+        </aside>
+
+        <div class="dashboard-content">
+            <div class="dashboard-header">
+                <h1>Dashboard</h1>
+                <div class="dashboard-actions">
+                    <button class="new-canvas-btn"><i class="ph ph-plus"></i>New Canvas</button>
+                    <button class="new-persona-btn"><i class="ph ph-user-plus"></i>New Persona</button>
+                </div>
+            </div>
+
+            <div id="overview-section" class="dashboard-section active">
+                <div class="dashboard-grid">
+                    <div class="dashboard-card stats">
+                        <h3>Analytics</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-number">12</span>
+                                <span class="stat-label">Personas</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">5</span>
+                                <span class="stat-label">Canvases</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">8</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card recent-personas">
+                        <h3>Recent Personas</h3>
+                        <div class="persona-list" id="recentPersonas">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card canvas-list">
+                        <h3>Business Model Canvases</h3>
+                        <div class="canvas-grid" id="businessCanvases">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="personas-section" class="dashboard-section">
+                <h2>All Personas</h2>
+                <div class="personas-grid">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+
+            <div id="canvas-section" class="dashboard-section">
+                <h2>Business Model Canvases</h2>
+                <div class="canvas-grid-full">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+
+            <div id="templates-section" class="dashboard-section">
+                <h2>Templates</h2>
+                <div class="templates-grid">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="canvasModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Business Model Canvas</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="canvas-grid">
+                <!-- Business Model Canvas sections -->
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetSpot - AI Persona Creation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SweetSpot</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-wrapper">
+                <h1>AI-Powered Persona Creation</h1>
+                <p>Build better products with data-driven user insights</p>
+                <a href="create.html" class="cta-button">Start Creating</a>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2>Why Choose SweetSpot</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="ph ph-brain"></i>
+                    <h3>AI-Powered</h3>
+                    <p>Advanced algorithms for accurate persona creation</p>
+                </div>
+                <div class="feature-card">
+                    <i class="ph ph-clock"></i>
+                    <h3>Time-Saving</h3>
+                    <p>Create personas in minutes, not days</p>
+                </div>
+                <div class="feature-card">
+                    <i class="ph ph-chart-line-up"></i>
+                    <h3>Data-Driven</h3>
+                    <p>Based on real market insights</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="ai-assistant" class="ai-widget">
+        <div class="ai-header">
+            <img src="assets/ai-avatar.svg" alt="AI Assistant">
+            <h3>SweetSpot Assistant</h3>
+            <button id="close-ai">×</button>
+        </div>
+        <div class="ai-messages"></div>
+        <div class="ai-input">
+            <input type="text" id="user-message" placeholder="Ask me anything...">
+            <button id="send-message">Send</button>
+        </div>
+    </div>
+
+    <button id="toggle-ai" class="ai-toggle">
+        <img src="assets/chat-icon.svg" alt="Chat">
+    </button>
+
+    <footer>
+        <p>&copy; 2024 SweetSpot. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

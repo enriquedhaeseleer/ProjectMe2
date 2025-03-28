@@ -1,0 +1,244 @@
+.dashboard-actions {
+    display: flex;
+    gap: 16px;
+}
+
+.dashboard-btn, 
+.new-canvas-btn, 
+.new-persona-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.new-canvas-btn {
+    background: linear-gradient(to right, #3b82f6, #2563eb);
+}
+
+.new-persona-btn {
+    background: linear-gradient(to right, #10b981, #059669);
+}
+
+.dashboard-btn:hover,
+.new-canvas-btn:hover,
+.new-persona-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0.95;
+}
+
+.dashboard-btn:active,
+.new-canvas-btn:active,
+.new-persona-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-btn i {
+    font-size: 16px;
+}
+
+.persona-item {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.persona-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.persona-item.compact {
+    padding: 12px;
+}
+
+.persona-item.full {
+    margin: 16px;
+}
+
+.personas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.persona-details {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 20px;
+}
+
+.template-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.template-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.template-card h4 {
+    color: #1a1a1a;
+    font-size: 18px;
+    margin: 0;
+}
+
+.template-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.template-card .use-template {
+    background: linear-gradient(135deg, #4F46E5 0%, #2563eb 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.template-card .use-template:hover {
+    filter: brightness(110%);
+    transform: translateY(-1px);
+}
+
+.template-card .template-preview {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.template-card .template-stats {
+    display: flex;
+    gap: 12px;
+    color: #666;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.canvas-grid-full {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    padding: 20px;
+}
+
+.canvas-item {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.canvas-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.canvas-preview {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.canvas-preview h4 {
+    color: #1a1a1a;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.canvas-preview p {
+    color: #666;
+    font-size: 13px;
+    margin: 0 0 12px 0;
+}
+
+.canvas-stats {
+    display: flex;
+    gap: 12px;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.canvas-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.canvas-actions button {
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 6px;
+    flex: 1;
+    white-space: nowrap;
+}
+
+.view-canvas {
+    background: linear-gradient(135deg, #4F46E5 0%, #2563eb 100%);
+    color: white;
+}
+
+.duplicate-canvas {
+    background: #f3f4f6;
+    color: #4b5563;
+}
+
+.delete-canvas {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.canvas-actions button:hover {
+    transform: translateY(-1px);
+    filter: brightness(105%);
+}
