@@ -225,7 +225,23 @@
 
 .view-canvas {
     background: linear-gradient(135deg, #4F46E5 0%, #2563eb 100%);
-    color: white;
+    color: black;
+    font-weight: 500;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.view-canvas:hover {
+    background: linear-gradient(135deg, #4338ca 0%, #1d4ed8 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .duplicate-canvas {
